@@ -1,9 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const userRouter = require('./routes/userRoutes');
 // const companyRouter = require('./routes/companyRoutes');
 const cookieParser = require('cookie-parser');
-const cors = require('cors');
+
 const morgan = require('morgan');
+
 
 
 const app = express();
@@ -14,7 +16,7 @@ const corsOptions = {
     origin: 'https://password-reset-fe-flow.netlify.app/', // Change this to the correct origin
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // if you need to send cookies
-    optionsSuccessStatus: 204
+    optionsSuccessStatus: 200
   };
   
   app.use(cors(corsOptions));
