@@ -9,7 +9,7 @@ const app = express();
 
 // enable CORS
 const corsOptions = {
-    origin: 'http://localhost:5173', // Change this to the correct origin
+    origin: 'https://password-reset-fe-flow.netlify.app/', // Change this to the correct origin
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // if you need to send cookies
     optionsSuccessStatus: 204
