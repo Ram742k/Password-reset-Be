@@ -4,6 +4,7 @@ const { MONGODB_URI } = require('./utils/config');
 require('dotenv').config();
 console.log(`Connecting to MongoDB...`);
 console.log('MongoDB URI:', process.env.MONGODB_URI);
+console.log('PORT', process.env.PORT);
 
 mongoose.connect(MONGODB_URI)
     .then(() => {
