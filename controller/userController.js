@@ -4,7 +4,6 @@ const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
 const nodemailer = require('nodemailer');
-const { register } = require('module');
 const jwt = require('jsonwebtoken');
 const { SECRET_KEY } = require('../utils/config');
 require('dotenv').config();
