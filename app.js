@@ -12,14 +12,14 @@ const app = express();
 
 
 // enable CORS
-const corsOptions = {
-    origin: 'https://password-reset-fe-flow.netlify.app/', // Change this to the correct origin
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, // if you need to send cookies
-    optionsSuccessStatus: 200
-  };
+// const corsOptions = {
+//     origin: 'https://password-reset-fe-flow.netlify.app/', // Change this to the correct origin
+//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//     credentials: true, // if you need to send cookies
+//     optionsSuccessStatus: 200
+//   };
   
-  app.use(cors(corsOptions));
+  app.use(cors());
   
 
 // log requests
