@@ -1,37 +1,31 @@
 const express = require('express');
 const cors = require('cors');
 const userRouter = require('./routes/userRoutes');
-// const companyRouter = require('./routes/companyRoutes');
 const cookieParser = require('cookie-parser');
-
 const morgan = require('morgan');
-
-
 
 const app = express();
 
+// Enable CORS with specific origin
+const corsOptions = {
+  origin: 'https://eclectic-strudel-2ca918.netlify.app/', // Change this to the correct origin without trailing slash
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // if you need to send cookies
+  optionsSuccessStatus: 200
+};
 
-// enable CORS
-// const corsOptions = {
-//     origin: 'https://password-reset-fe-flow.netlify.app/', // Change this to the correct origin
-//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-//     credentials: true, // if you need to send cookies
-//     optionsSuccessStatus: 200
-//   };
-  
-  app.use(cors());
-  
+app.use(cors(corsOptions));
 
-// log requests
+// Log requests
 app.use(morgan('dev'));
 
-// parse the cookies of the request
+// Parse the cookies of the request
 app.use(cookieParser());
 
-// to parse the body of the request
+// Parse the body of the request
 app.use(express.json());
 
+// Define routes
 app.use('/users', userRouter);
-
 
 module.exports = app;
