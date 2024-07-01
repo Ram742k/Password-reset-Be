@@ -10,6 +10,7 @@ const userController = {
   login: async (request, response) => {
     try {
         
+      console.log(request.body);
         // get the user email and password from the request body
         const { email, password } = request.body;
 
