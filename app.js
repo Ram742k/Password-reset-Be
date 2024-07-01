@@ -8,7 +8,7 @@ const app = express();
 
 // Enable CORS with specific origin
 const corsOptions = {
-  origin: 'https://eclectic-strudel-2ca918.netlify.app/', // Change this to the correct origin without trailing slash
+  origin: 'https://eclectic-strudel-2ca918.netlify.app', // Change this to the correct origin without trailing slash
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, // if you need to send cookies
   optionsSuccessStatus: 200,
@@ -18,7 +18,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use((req, res, next) => {
     res.set({
-      "Access-Control-Allow-Origin": "https://password-reset-fe-flow.netlify.app",
+      "Access-Control-Allow-Origin": "https://eclectic-strudel-2ca918.netlify.app",
       "Access-Control-Allow-Methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
       "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
     });
