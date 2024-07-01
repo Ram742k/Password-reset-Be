@@ -79,7 +79,7 @@ const userController = {
         from: 'passwordreset@demo.com',
         subject: 'Password Reset',
         text: `Please click on the following link to reset your password:\n\n
-          https://eclectic-strudel-2ca918.netlify.app/users/reset-password/${token}\n\n
+          https://eclectic-strudel-2ca918.netlify.app/reset-password/${token}\n\n
           If you did not request this, please ignore this email and your password will remain unchanged.\n`,
       };
   
