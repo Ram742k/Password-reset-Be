@@ -44,4 +44,11 @@ app.use(express.json());
 // Define routes
 app.use('/users', userRouter);
 
+app.use(express.static(path.join(__dirname, 'build')));
+
+// Catch-all handler to send back index.html for any request that doesn't match an API route
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 module.exports = app;
